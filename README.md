@@ -32,7 +32,7 @@ Use this method if you don't want to install anything on your computer.
     - Click **Edit Code**, delete existing code, and paste the contents of `src/worker.js`.
     - Click **Deploy** (top right) to save the code.
 
-3.  **Connect Database (New UI):**
+3.  **Connect Database:**
     - Go back to your Worker's overview page.
     - Click the **Bindings** tab (top menu).
     - Click **Add binding** (or "Add") > select **KV namespace**.
@@ -116,4 +116,5 @@ You can manage links programmatically using headers for authentication.
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ## 📄 License
+
 [MIT](LICENSE)
