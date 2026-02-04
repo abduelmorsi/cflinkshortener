@@ -60,7 +60,7 @@ If you have `npm` and `wrangler` installed.
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/yourusername/link-shortener.git](https://github.com/yourusername/link-shortener.git)
+    git clone [https://github.com/abduelmorsi/cflinkshortener.git](https://github.com/abduelmorsi/cflinkshortener.git)
     cd link-shortener
     ```
 
@@ -118,3 +118,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## 📄 License
 
 [MIT](LICENSE)
+
