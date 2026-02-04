@@ -1,0 +1,14 @@
+name = "link-shortener"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+# --- KV Database Setup ---
+# Users must run `npx wrangler kv:namespace create SHORTLINKS` to get these IDs
+# [[kv_namespaces]]
+# binding = "SHORTLINKS"
+# id = "replace-with-your-kv-id"
+
+# --- Environment Variables ---
+# You can set these in the Cloudflare Dashboard or here (not recommended for secrets)
+# [vars]
+# ADMIN_PASSWORD = "change-this-in-dashboard"
