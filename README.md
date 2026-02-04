@@ -22,25 +22,36 @@ No servers to maintain. No database costs. 100% control over your data.
 Use this method if you don't want to install anything on your computer.
 
 1.  **Create KV Namespace (Database):**
-    - Go to Cloudflare Dashboard > **Workers & Pages** > **KV**.
-    - Create a namespace named `SHORTLINKS`.
+    - Go to Cloudflare Dashboard > **Workers & Pages** > **KV** (sidebar).
+    - Click **Create a Namespace**.
+    - Name it `SHORTLINKS` and click **Add**.
 
 2.  **Create the Worker:**
-    - Go to **Workers** > **Create Worker**.
+    - Go to **Workers & Pages** > **Create Application** > **Create Worker**.
     - Name it `link-shortener` and deploy.
-    - Click **Edit Code** and paste the contents of `src/worker.js` from this repo.
+    - Click **Edit Code**, delete existing code, and paste the contents of `src/worker.js`.
+    - Click **Deploy** (top right) to save the code.
 
-3.  **Connect Database:**
-    - Go to Worker Settings > **Variables** > **KV Namespace Bindings**.
-    - Bind variable `SHORTLINKS` to your `SHORTLINKS` namespace.
+3.  **Connect Database (New UI):**
+    - Go back to your Worker's overview page.
+    - Click the **Bindings** tab (top menu).
+    - Click **Add binding** (or "Add") > select **KV namespace**.
+    - **Variable name:** `SHORTLINKS` (Must be uppercase).
+    - **KV namespace:** Select the `SHORTLINKS` namespace you created in step 1.
+    - Click **Add Binding** and then **Deploy** if prompted.
 
 4.  **Set Password:**
-    - Go to **Environment Variables**.
-    - Add `ADMIN_PASSWORD` and set your secret password. Encrypt it!
+    - Click the **Settings** tab (top menu).
+    - Go to **Variables** (sometimes labeled "Environment Variables").
+    - Click **Add Variable**.
+    - **Variable name:** `ADMIN_PASSWORD`
+    - **Value:** Your secret password (e.g., `MySecretPass123`).
+    - Click **Encrypt** (Recommended) and **Save/Deploy**.
 
 5.  **Add Domain:**
-    - Go to **Triggers** > **Custom Domains**.
-    - Add your subdomain (e.g., `link.yourdomain.com`).
+    - Still in **Settings**, go to the **Triggers** tab (or "Domains & Routes").
+    - Click **Add Custom Domain**.
+    - Enter your subdomain (e.g., `link.yourdomain.com`) and save.
 
 ---
 
